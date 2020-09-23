@@ -1,0 +1,28 @@
+! ** JCreator Project File (C)2000
+! ********** DO NOT EDIT *********
+
+VERSION := "1.10"
+LABEL := "BreezySwing"
+JDKPROFILE := ""
+ACTIVE := "1"
+OUTPUTPATH := "\\classes"
+COMPILER := ""
+
+! Start RunTime Configuration Structure
+#[BeginRunTime]LABEL := "<Default>" RUNAPPLIC := "" RUNAPPLET := "" PARAM := "" RUN := "" CHECK := "10" #[EndRunTime]
+! Start Required Libraries Structure
+
+! Start Project Folder Structure
+#[BeginFolder]
+LABEL := "Root"
+FILTER := ""
+
+#[BeginFile]SOURCE := "\\MessageBox.java" #[EndFile]
+#[BeginFile]SOURCE := "\\IntegerField.java" #[EndFile]
+#[BeginFile]SOURCE := "\\GBPanel.java" #[EndFile]
+#[BeginFile]SOURCE := "\\GBFrame.java" #[EndFile]
+#[BeginFile]SOURCE := "\\GBDialog.java" #[EndFile]
+#[BeginFile]SOURCE := "\\GBApplet.java" #[EndFile]
+#[BeginFile]SOURCE := "\\Format.java" #[EndFile]
+#[BeginFile]SOURCE := "\\DoubleField.java" #[EndFile]
+#[EndFolder]
