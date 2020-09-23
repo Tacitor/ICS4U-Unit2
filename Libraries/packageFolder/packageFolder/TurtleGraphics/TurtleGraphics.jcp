@@ -1,0 +1,39 @@
+! ** JCreator Project File (C)2000
+! ********** DO NOT EDIT *********
+
+VERSION := "1.10"
+LABEL := "TurtleGraphics"
+JDKPROFILE := "JDK version 1.3.1_04"
+ACTIVE := "1"
+OUTPUTPATH := "..\\\\TurtleGraphics"
+COMPILER := ""
+
+! Start RunTime Configuration Structure
+#[BeginRunTime]LABEL := "<Default>" RUNAPPLIC := "<Default>" RUNAPPLET := "" PARAM := "" RUN := "TestMultiplePads" CHECK := "10" #[EndRunTime]
+! Start Required Libraries Structure
+#[BeginRLibrary]LABEL := "bookClasses" #[EndRLibrary]
+
+! Start Project Folder Structure
+#[BeginFolder]
+LABEL := "Root"
+FILTER := ""
+
+#[BeginFile]SOURCE := "\\AbstractPen.java" #[EndFile]
+#[BeginFile]SOURCE := "\\BackwardPen.java" #[EndFile]
+#[BeginFile]SOURCE := "\\Command.java" #[EndFile]
+#[BeginFile]SOURCE := "\\CommandDrawLine.java" #[EndFile]
+#[BeginFile]SOURCE := "\\CommandDrawString.java" #[EndFile]
+#[BeginFile]SOURCE := "\\CommandSetColor.java" #[EndFile]
+#[BeginFile]SOURCE := "\\CommandSetPenWidth.java" #[EndFile]
+#[BeginFile]SOURCE := "\\Pen.java" #[EndFile]
+#[BeginFile]SOURCE := "\\RainbowPen.java" #[EndFile]
+#[BeginFile]SOURCE := "\\Shapes.java" #[EndFile]
+#[BeginFile]SOURCE := "\\SketchPad.java" #[EndFile]
+#[BeginFile]SOURCE := "\\SketchPadWindow.java" #[EndFile]
+#[BeginFile]SOURCE := "\\StandardPen.java" #[EndFile]
+#[BeginFile]SOURCE := "\\TestMultiplePads.java" #[EndFile]
+#[BeginFile]SOURCE := "\\TestPen.java" #[EndFile]
+#[BeginFile]SOURCE := "\\TestWithRecursion.java" #[EndFile]
+#[BeginFile]SOURCE := "\\WigglePen.java" #[EndFile]
+#[BeginFile]SOURCE := "\\WiggleRainbowPen.java" #[EndFile]
+#[EndFolder]

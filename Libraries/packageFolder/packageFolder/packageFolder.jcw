@@ -1,0 +1,17 @@
+! ** JCreator Workspace File (C)2000
+! ********** DO NOT EDIT *********
+
+VERSION := "1.00"
+LABEL := "packageFolder"
+
+! Start Project Structure
+#[BeginProject]SOURCE := "\\TurtleGraphics\\TurtleGraphics.jcp" #[EndProject]
+#[BeginProject]SOURCE := "\\TerminalIO\\TerminalIO.jcp" #[EndProject]
+#[BeginProject]SOURCE := "\\BreezySwing\\BreezySwing.jcp" #[EndProject]
+
+! Start Last Document Structure
+#[BeginFile]SOURCE := "\\TurtleGraphics\\SketchPadWindow.java" #[EndFile]
+#[BeginFile]SOURCE := "\\TurtleGraphics\\StandardPen.java" #[EndFile]
+
+! Start Breakpoint Structure
+
