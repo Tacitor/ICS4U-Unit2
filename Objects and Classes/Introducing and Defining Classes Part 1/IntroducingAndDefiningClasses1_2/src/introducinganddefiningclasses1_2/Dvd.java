@@ -68,10 +68,10 @@ public class Dvd {
 
     public String toString() {
         return "Title: " + title + 
-                "Genre: " + genre + 
-                "Year produced: " + year + 
-                "On loan? " + loan + 
-                "Loaned to: " + loanee;
+                "\nGenre: " + genre + 
+                "\nYear produced: " + year + 
+                "\nOn loan? " + loan + 
+                "\nLoaned to: " + loanee;
     }
 
 }
