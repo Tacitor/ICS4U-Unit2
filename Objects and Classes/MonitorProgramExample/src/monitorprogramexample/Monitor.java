@@ -51,7 +51,15 @@ public class Monitor {
     
     //add aditional behavior
     public void draw(StandardPen p) {
-        
+        double sideLength = size * 10;
+        p.up();
+        p.move(0,0);
+        p.move(-sideLength, -sideLength);
+        p.down();
+        p.move(-sideLength, sideLength);
+        p.move(sideLength, sideLength);
+        p.move(sideLength, -sideLength);
+        p.move(-sideLength, -sideLength);
     }
     
     //toString method

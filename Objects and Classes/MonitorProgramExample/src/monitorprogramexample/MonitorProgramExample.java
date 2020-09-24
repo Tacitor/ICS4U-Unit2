@@ -5,6 +5,8 @@
  */
 package monitorprogramexample;
 
+import TurtleGraphics.*;
+
 /**
  *
  * @author lukra1175
@@ -25,6 +27,10 @@ public class MonitorProgramExample {
         m1.turnOn();
         
         System.out.println(m1.toString());
+        
+        StandardPen p = new StandardPen();
+        m1.draw(p);
+        m2.draw(p);
     }
     
 }
