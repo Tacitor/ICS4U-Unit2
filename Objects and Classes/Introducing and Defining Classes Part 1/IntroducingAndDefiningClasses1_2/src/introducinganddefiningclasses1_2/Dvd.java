@@ -1,7 +1,7 @@
 /*
  * Lukas Krampiz
  * Sep 24, 2020
- * 
+ * Develop a DVD class that contains information about the title, genre, production year, whether or not it is on loan and who the DVD is on loan to.
  */
 package introducinganddefiningclasses1_2;
 
