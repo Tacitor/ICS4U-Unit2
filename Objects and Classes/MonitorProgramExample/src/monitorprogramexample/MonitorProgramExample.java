@@ -28,7 +28,7 @@ public class MonitorProgramExample {
         
         System.out.println(m1.toString());
         
-        StandardPen p = new StandardPen();
+        StandardPen p = new StandardPen(1000,1000);
         m1.draw(p);
         m2.draw(p);
     }
