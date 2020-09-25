@@ -6,7 +6,6 @@
 package krampitzmysavings3_3;
 
 import java.text.DecimalFormat;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -57,9 +56,26 @@ public class KrampitzMySavings3_3 {
                 //exit the program
                 runLoop =  false;
             } else if (input == 8) {
-                
+                //with draw all the money
+                System.out.println("You withdrew all " + money.format(bank.getTotal()) + " of your money.");
+                //clear the account
+                bank.setPennies(0);
+                bank.setNickels(0);
+                bank.setDimes(0);
+                bank.setQuarters(0);
             } else if (input == 7) {
-                
+                input = getInput("Select a type to remove:\n1. Penny\n2. Nickel\n3. Dime\n4. Quarter", validInput, reader);
+                if (input == 1) {
+                    bank.setPennies(0);
+                } else if (input == 2) {
+                    bank.setNickels(0);
+                } else if (input == 3) {
+                    bank.setDimes(0);
+                } else if (input == 4) {
+                    bank.setQuarters(0);
+                } else {
+                    System.out.println("Error! No action preformed");
+                }
             } else if (input == 6) {
                 //ask how many coins should be added
                 input = getCoinInput("How many Quarters would you like to add?", validInput, reader);  
@@ -98,6 +114,13 @@ public class KrampitzMySavings3_3 {
         
     }
     
+    /**
+     * Collect input from the user, few restrictions
+     * @param msg
+     * @param validInput
+     * @param reader
+     * @return 
+     */
     public static int getCoinInput(String msg, boolean validInput, Scanner reader) {
         int input = 0;
         
@@ -122,6 +145,13 @@ public class KrampitzMySavings3_3 {
         return input;
     }
     
+    /**
+     * Collect input from the user, moderate restrictions
+     * @param msg
+     * @param validInput
+     * @param reader
+     * @return 
+     */
     public static int getInput(String msg, boolean validInput, Scanner reader) {
         int input = 0;
         
