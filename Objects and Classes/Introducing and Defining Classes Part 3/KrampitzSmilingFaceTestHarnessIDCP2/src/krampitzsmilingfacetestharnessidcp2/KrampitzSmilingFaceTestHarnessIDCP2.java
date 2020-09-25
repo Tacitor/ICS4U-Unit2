@@ -7,10 +7,11 @@ package krampitzsmilingfacetestharnessidcp2;
 
 import java.util.Scanner;
 
-public class KrampitzSmilingFaceTestHarnessIDCP2 {   
+public class KrampitzSmilingFaceTestHarnessIDCP2 {
+
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        double x,y,radius;
+        double x, y, radius;
         boolean hasSmile;
         System.out.println("Initial X position: ");
         x = reader.nextDouble();
@@ -18,27 +19,28 @@ public class KrampitzSmilingFaceTestHarnessIDCP2 {
         y = reader.nextDouble();
         System.out.println("Smiling? (true/false): ");
         hasSmile = reader.nextBoolean();
-                       
-        SmilingFace face = new SmilingFace(x,y);     //Instantiates an object!   
-        
+
+        SmilingFace face = new SmilingFace(x, y);     //Instantiates an object!   
+
         //update the smile field
         face.setMood(hasSmile);
-        
+
         face.draw(); //this draw command draws a face
-        
+
         //purpose is to loop infinitly. Let the user draw infinit smileing faces one at a time.
-        while(true){
+        while (true) {
             System.out.println("Initial X position: ");
             x = reader.nextDouble();
             System.out.println("Initial Y position: ");
             y = reader.nextDouble();
             System.out.println("Smiling? (true/false): ");
             hasSmile = reader.nextBoolean();
-            
+
+            face.erase();
+
             //update the smile field
             face.setMood(hasSmile);
             
-            face.erase();
             face.move(x, y);
             face.draw(); //this draw command draws a face
         }
