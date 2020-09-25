@@ -23,6 +23,7 @@ public class MonitorProgramExample {
         m1 = new Monitor(2400, 24, false); //instantiation
         
         Monitor m2 = new Monitor(4000, 40, true);
+        Monitor m3 = new Monitor(800, 15);
         
         m1.turnOn();
         

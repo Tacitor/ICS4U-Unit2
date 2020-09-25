@@ -17,11 +17,16 @@ public class Monitor {
     private double size; //inches
     private boolean on;
     
+    public Monitor(int rez, double size) {
+        this.rez = rez;
+        this.size = size;
+        on = false;
+    }
+    
     //next add a constructor
-    public Monitor(int newRez, double newSize, boolean newOn) {
-        rez = newRez;
-        size = newSize;
-        on = newOn;
+    public Monitor(int rez, double size, boolean on) {
+        this(rez, size); //constructor chainning
+        this.on = on;
     }
     
     //next add egtters and setters
@@ -37,8 +42,8 @@ public class Monitor {
         return on;
     }
     
-    public void setRez(int newRez) {
-        rez = newRez;
+    public void setRez(int rez) {
+        this.rez = rez;
     }
     
     public void turnOn() {
