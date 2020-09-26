@@ -85,6 +85,14 @@ public class Car {
         this.y = y;
     }
     
+    public void setColour(Color colour) {
+        this.colour = colour;
+    }
+    
+    public void setSize(double size) {
+        this.size = size;
+    }
+    
     public void erase() {
         pen.setColor(Color.WHITE);
         draw();
