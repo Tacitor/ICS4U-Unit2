@@ -23,9 +23,11 @@ public class Wheel extends Circle {
         spokes = s;
     }
     
+    //draws the wheel using the given pen
     public void draw(Pen p){        
         super.draw(p);
-      
+        
+        //Loop! Purpose is to draw spokes of the wheel on to of the circle. It does this by looping as may times as there is a spoke. Each loop the pen moves to the center of the wheele and moves out the distance of one radius, and repeats in differnt directions.
         for(int i = 1; i <= spokes; i++){
             p.up();
             p.move(xPos, yPos);
@@ -36,11 +38,12 @@ public class Wheel extends Circle {
         
     }
     
+    //Mutator!
     public void setSpokes(int s){
         spokes = s;
     }
     
-    
+    //Accessor!
     public String toString(){
         String str = "WHEEL\n"
                 + "Radius: " + radius + "\n"
