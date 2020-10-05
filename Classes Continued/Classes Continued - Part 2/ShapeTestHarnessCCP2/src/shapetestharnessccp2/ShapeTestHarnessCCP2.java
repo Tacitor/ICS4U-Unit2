@@ -11,10 +11,10 @@ import TurtleGraphics.*;
 public class ShapeTestHarnessCCP2 {
 
     public static void main(String[] args) {
-        Pen p = new StandardPen(500,500); //Instantiation!
-        Shape s1 = new Circle(20,20,20);//Instantiation!
-        Shape s2 = new Rect(-50,-50,10,20);//Instantiation!
-        Shape s3 = new Wheel(-20,-20,20,6);//Instantiation!
+        Pen p = new StandardPen(500,500);
+        Shape s1 = new Circle(20,20,20);
+        Shape s2 = new Rect(-50,-50,10,20);
+        Shape s3 = new Wheel(-20,-20,20,6);
         
         s1.draw(p);
         s2.draw(p);
@@ -26,4 +26,3 @@ public class ShapeTestHarnessCCP2 {
     }
     
 }
-//Output: The program outputs a Turtle Graphics Window showing the shapes created. In the console the ouptut displays the attributes of the shapes.
