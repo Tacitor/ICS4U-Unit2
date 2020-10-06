@@ -48,6 +48,7 @@ public class Rect extends AbstractShape{
         p.move(height);
     }
     
+    //Mutator!
     //increases the size of the rectangle
     public void stretchBy(double factor){
         height = height * factor;
@@ -60,6 +61,7 @@ public class Rect extends AbstractShape{
     //In the superclass, the toString method calls area, which will activate 
     //the area method in this class and not the area method in the superclass
     //which is abstract
+    //Accessor!
     public String toString(){
         String str = "RECTANGLE\n"
                 + "Width and Height: " + width + " and " + height + "\n"

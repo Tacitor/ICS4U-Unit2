@@ -26,25 +26,42 @@ abstract public class AbstractShape implements Shape {
         yPos = yLoc;
     }
     
-  
+    //Purpose is to make sure all sub classes have an area calculation method
     abstract public double area();
     
+    //Purpose is to make sure all sub classes have a draw method
     abstract public void draw(Pen p);
-  
+    
+    //Accessor!
+    /**
+     * return part of the position (x part)
+     * @return 
+     */
     public final double getXPos(){
         return xPos;
     }
     
+    //Accessor!
+    /**
+     * return part of the position (y part)
+     * @return 
+     */
     public final double getYPos(){
         return yPos;
     }
     
-   
+   //Mutator!
+    /**
+     * Mutate the position variables
+     * @param xLoc
+     * @param yLoc 
+     */
     public void move(double xLoc, double yLoc){
         xPos = xLoc;
         yPos= yLoc;
     }
     
+    //Mutator! Well not yet but when there's a body it is
     abstract public void stretchBy(double factor);
   
     public String toString(){

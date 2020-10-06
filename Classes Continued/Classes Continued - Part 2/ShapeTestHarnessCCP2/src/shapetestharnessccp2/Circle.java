@@ -43,6 +43,7 @@ public class Circle extends AbstractShape {
     }
     
     //makes the circle larger
+    //Mutator!
     public void stretchBy(double factor){
         radius = radius * factor;
     }
@@ -53,6 +54,7 @@ public class Circle extends AbstractShape {
     //In the superclass, the toString method calls area, which will activate 
     //the area method in this class and not the area method in the superclass
     //which is abstract
+    //Accessor!
     public String toString(){
         String str = "CIRCLE\n"
                 + "Radius: " + radius + "\n"
