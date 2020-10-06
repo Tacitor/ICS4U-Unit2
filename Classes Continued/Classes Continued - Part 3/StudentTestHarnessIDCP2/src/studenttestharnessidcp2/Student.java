@@ -5,7 +5,7 @@
  */
 package studenttestharnessidcp2;
 
-public class Student {
+public class Student implements Learner{
     
     private String name;    
     private int test1;      
