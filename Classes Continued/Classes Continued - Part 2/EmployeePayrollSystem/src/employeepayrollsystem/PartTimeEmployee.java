@@ -13,7 +13,7 @@ public class PartTimeEmployee extends Employee{
         super();
     }
     
-    //Purpose is to calculate how much money an employee earned
+    //Purpose is to calculate how much money an employee earned for their hours
     public double getPay(){
         double pay;        
         pay = rate * hours;
