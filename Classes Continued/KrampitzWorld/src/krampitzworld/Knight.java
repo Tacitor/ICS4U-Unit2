@@ -1,7 +1,7 @@
 /*
  * Lukas Krampiz
  * Oct 7, 2020
- * A Human Wizard, very cool
+ * A Human Knight, has a horse
  */
 package krampitzworld;
 
@@ -70,7 +70,7 @@ public class Knight extends Human {
 
     @Override
     public String toString() {
-        String str = "Class: KNIGHT"
+        String str = "\nClass: KNIGHT"
                 + "\nHorse's name: " + horseName
                 + "\n" + super.toString();
 

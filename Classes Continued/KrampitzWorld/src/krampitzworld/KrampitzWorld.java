@@ -21,14 +21,14 @@ public class KrampitzWorld {
         StandardPen pen = new StandardPen(500, 500);
         
         //Declares 4 Humans.
-        Human h1, h2, h3, h4;   
+        Human h1, h2, h3, h4, arch;   
         
         //Instantiates a Knight
         h1 = new Knight("Caldor", 35, 1.8, 100, 50, -50, "Jimmothy");
         
         //Instantiates a Wizard and moves it. 
         h2 = new Wizard("Rasmodius", 118, 1.6, 100, 0, 0, 200);
-        h2.move(-200, 0);
+        h2.move(-100, 0);
         
         // Clones the Knight  and changes its name
         h3 = ((Knight)h1).clone();
@@ -47,16 +47,24 @@ public class KrampitzWorld {
             h4.move(20, 20);
         }
         
+        //Instantiated an Human from the third class (Archer)
+        arch = new Archer("Ronaldo", 10, 1, 50, 0, 0, 20);
+        arch.move(-10, 200);
+        ((Archer)arch).shoot();
+        ((Archer)arch).shoot();
+        
         h1.draw(pen);
         h2.draw(pen);
         h3.draw(pen);
         h4.draw(pen);
+        arch.draw(pen);
         
         System.out.println("There are a total of " + Human.getNumHumans() + " humans in the world.");
         System.out.println(h1);
         System.out.println(h2);
         System.out.println(h3);
         System.out.println(h4);
+        System.out.println(arch);
         
     }
     

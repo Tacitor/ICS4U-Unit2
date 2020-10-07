@@ -101,7 +101,7 @@ public class Wizard extends Human {
 
     @Override
     public String toString() {
-        String str = "Class: WIZARD"
+        String str = "\nClass: WIZARD"
                 + "\nMagicka: " + magicka
                 + "\n" + super.toString();
 
