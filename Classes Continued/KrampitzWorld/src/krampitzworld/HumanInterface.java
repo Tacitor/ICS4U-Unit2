@@ -16,7 +16,10 @@ public interface HumanInterface {
     public String getName();
     //change the name of the human
     public void setName(String name);
-    //get the age of the human
+    /**
+     * Get the age of the human
+     * @return 
+     */
     public int getAge();
     //change the age, return false if invalid
     public boolean setAge(int a);
@@ -37,5 +40,6 @@ public interface HumanInterface {
     //get the x pos
     public int getXPos();
     //return string with all atributes
+    @Override
     public String toString();
 }
