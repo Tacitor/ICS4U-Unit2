@@ -21,7 +21,7 @@ public class Wizard extends Human {
     //class vars
     protected static int LOW_MAGICKA = 0;
     protected static int HIGH_MAGICKA = 200;
-    protected static Color WIZARD_COLOUR = Color.MAGENTA;
+    protected static Color WIZARD_COLOUR = Color.BLUE;
     protected static int SPELL_COST = 10;
 
     /**

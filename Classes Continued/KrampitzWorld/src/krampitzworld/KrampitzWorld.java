@@ -17,22 +17,47 @@ public class KrampitzWorld {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println(Human.getNumHumans());
-        
-        HumanInterface h1 = new Wizard();
-        HumanInterface h2 = new Wizard("???", 0, 0, 100, 0, 0, 40);
-        
+        // TODO code application logic here        
         StandardPen pen = new StandardPen(500, 500);
         
-        ((Wizard)h1).setMagicka(50);        
-        ((Wizard)h1).castSpell();
+        //Declares 4 Humans.
+        Human h1, h2, h3, h4;   
         
-        System.out.println(h1);
+        //Instantiates a Knight
+        h1 = new Knight("Caldor", 35, 1.8, 100, 50, -50, "Jimmothy");
+        
+        //Instantiates a Wizard and moves it. 
+        h2 = new Wizard("Rasmodius", 118, 1.6, 100, 0, 0, 200);
+        h2.move(-200, 0);
+        
+        // Clones the Knight  and changes its name
+        h3 = ((Knight)h1).clone();
+        h3.setName("Marombo");    
+        
+        //Checks if the Knight clone is not equal to the original Knight, and if so: Moves the clone.
+        if (!((Knight)h3).equals((Knight)h1)) {
+            h3.move(0, 0);
+        }
+        
+        // Clones the Wizard
+        h4 = ((Wizard)h2).clone();  
+        
+        //Checks if the Knight clone is not equal to the original Knight, and if so: Moves the clone.
+        if (((Wizard)h4).equals((Wizard)h2)) {
+            h4.move(20, 20);
+        }
         
         h1.draw(pen);
+        h2.draw(pen);
+        h3.draw(pen);
+        h4.draw(pen);
         
-        System.out.println(Human.getNumHumans());
+        System.out.println("There are a total of " + Human.getNumHumans() + " humans in the world.");
+        System.out.println(h1);
+        System.out.println(h2);
+        System.out.println(h3);
+        System.out.println(h4);
+        
     }
     
 }

@@ -19,7 +19,7 @@ public class Knight extends Human {
     //maybe a var for power levels, if I have time
 
     //class vars
-    protected static Color KNIGHT_COLOUR = Color.ORANGE;
+    protected static Color KNIGHT_COLOUR = Color.RED;
 
     /**
      * Primary constructor
@@ -70,7 +70,7 @@ public class Knight extends Human {
 
     @Override
     public String toString() {
-        String str = "Class: WIZARD"
+        String str = "Class: KNIGHT"
                 + "\nHorse's name: " + horseName
                 + "\n" + super.toString();
 
