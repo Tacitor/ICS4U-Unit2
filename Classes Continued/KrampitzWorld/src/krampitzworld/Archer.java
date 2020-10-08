@@ -53,7 +53,35 @@ public class Archer extends Human {
     @Override
     public void draw(Pen p) {
         p.setColor(ARCHER_COLOUR);
-        super.draw(p); //To change body of generated methods, choose Tools | Templates.
+        //draw the center line
+        p.up();
+        p.move(xPos - DRAW_SIZE*3, yPos);
+        p.down();
+        p.move(xPos + DRAW_SIZE*3, yPos);
+        //draw arrow tip
+        p.move(xPos + DRAW_SIZE*3, yPos + DRAW_SIZE);
+        p.move(xPos + DRAW_SIZE*4, yPos);
+        p.move(xPos + DRAW_SIZE*3, yPos - DRAW_SIZE);
+        p.move(xPos + DRAW_SIZE*3, yPos);
+        //draw feathers
+        //back feather
+        p.up();
+        p.move(xPos - DRAW_SIZE*3, yPos);
+        p.down();
+        p.move(xPos - DRAW_SIZE*4, yPos + DRAW_SIZE);
+        p.up();
+        p.move(xPos - DRAW_SIZE*3, yPos);
+        p.down();
+        p.move(xPos - DRAW_SIZE*4, yPos - DRAW_SIZE);
+        //front featehr
+        p.up();
+        p.move(xPos - DRAW_SIZE*2, yPos);
+        p.down();
+        p.move(xPos - DRAW_SIZE*3, yPos + DRAW_SIZE);
+        p.up();
+        p.move(xPos - DRAW_SIZE*2, yPos);
+        p.down();
+        p.move(xPos - DRAW_SIZE*3, yPos - DRAW_SIZE);
     }
     
     /**

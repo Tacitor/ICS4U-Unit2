@@ -52,7 +52,25 @@ public class Wizard extends Human {
     @Override
     public void draw(Pen p) {
         p.setColor(WIZARD_COLOUR);
-        super.draw(p); //To change body of generated methods, choose Tools | Templates.
+        //draw a dot in the center
+        p.up();
+        p.move(xPos, yPos);
+        p.down();
+        p.move(xPos, yPos);
+        //draw hat base
+        p.up();
+        p.move(xPos + DRAW_SIZE*3, yPos + DRAW_SIZE/2);
+        p.down();
+        p.move(xPos + DRAW_SIZE*3, yPos - DRAW_SIZE/2);
+        p.move(xPos - DRAW_SIZE*3, yPos - DRAW_SIZE/2);
+        p.move(xPos - DRAW_SIZE*3, yPos + DRAW_SIZE/2);
+        p.move(xPos + DRAW_SIZE*3, yPos + DRAW_SIZE/2);
+        //draw hat point
+        p.up();
+        p.move(xPos + DRAW_SIZE*2, yPos + DRAW_SIZE/2);
+        p.down();
+        p.move(xPos, yPos + DRAW_SIZE*6);
+        p.move(xPos - DRAW_SIZE*2, yPos + DRAW_SIZE/2);
     }
     
     /**

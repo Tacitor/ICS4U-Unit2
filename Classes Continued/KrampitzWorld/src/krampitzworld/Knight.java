@@ -49,7 +49,24 @@ public class Knight extends Human {
     @Override
     public void draw(Pen p) {
         p.setColor(KNIGHT_COLOUR);
-        super.draw(p); //To change body of generated methods, choose Tools | Templates.
+        //draw a cross in the center
+        p.up();
+        p.move(xPos, yPos);
+        p.down();
+        p.move(xPos, yPos);
+        //draw top part of shield
+        p.up();
+        p.move(xPos + DRAW_SIZE*3, yPos + DRAW_SIZE/2);
+        p.down();
+        p.move(xPos, yPos + DRAW_SIZE*2.5);
+        p.move(xPos - DRAW_SIZE*3, yPos + DRAW_SIZE/2);
+        //draw bottom part of shield
+        p.move(xPos - DRAW_SIZE*2, yPos - DRAW_SIZE*2);
+        p.move(xPos - DRAW_SIZE, yPos - DRAW_SIZE*3.5);
+        p.move(xPos, yPos - DRAW_SIZE*4);
+        p.move(xPos + DRAW_SIZE, yPos - DRAW_SIZE*3.5);
+        p.move(xPos + DRAW_SIZE*2, yPos - DRAW_SIZE*2);
+        p.move(xPos + DRAW_SIZE*3, yPos + DRAW_SIZE/2);
     }
     
     /**
