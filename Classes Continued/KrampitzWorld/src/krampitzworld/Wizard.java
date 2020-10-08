@@ -134,6 +134,11 @@ public class Wizard extends Human {
         return level;
     }
 
+    /**
+     * Have the wizard increase their power level
+     *
+     * @return
+     */
     public boolean levelUp() {
         boolean success = false;
 

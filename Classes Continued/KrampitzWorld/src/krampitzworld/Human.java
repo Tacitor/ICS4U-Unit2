@@ -170,7 +170,11 @@ abstract public class Human implements HumanInterface {
 
         return str;
     }
-
+    
+    /**
+     * Get the number of humans instances in the world
+     * @return 
+     */
     public static int getNumHumans() {
         return NUM_HUMANS;
     }

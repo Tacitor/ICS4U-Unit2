@@ -1,7 +1,7 @@
 /*
  * Lukas Krampiz
  * Oct 7, 2020
- * 
+ * A TestHarness for very cool Human classes
  */
 package krampitzworld;
 

@@ -39,8 +39,9 @@ public interface HumanInterface {
     public int getYPos();
     //get the x pos
     public int getXPos();
-    //return string with all atributes
+    //heal the user to max health
     public void heal();
+    //return string with all atributes
     @Override
     public String toString();
 }
