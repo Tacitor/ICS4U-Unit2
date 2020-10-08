@@ -16,7 +16,9 @@ public class Wizard extends Human {
 
     //instance vars
     protected int magicka;
-    //maybe a var for power levels, if I have time
+    //maybe a var for power levels, if I have time.
+    //Wow great idea I think I'll do just that
+    protected int level;
 
     //class vars
     protected static int LOW_MAGICKA = 0;
@@ -30,6 +32,7 @@ public class Wizard extends Human {
     public Wizard() {
         super();
         magicka = 0;
+        level = 1; //all wizards start at 1, no short cuts for anybody. It takes hard work to become a master Wizard
     }
 
     /**
@@ -46,6 +49,7 @@ public class Wizard extends Human {
     public Wizard(String name, int age, double height, int health, int xPos, int yPos, int magicka) {
         super(name, age, height, health, xPos, yPos);
         this.magicka = magicka;
+        level = 1; //all wizards start at 1, no short cuts for anybody. It takes hard work to become a master Wizard
 
     }
 
@@ -59,35 +63,42 @@ public class Wizard extends Human {
         p.move(xPos, yPos);
         //draw hat base
         p.up();
-        p.move(xPos + DRAW_SIZE*3, yPos + DRAW_SIZE/2);
+        p.move(xPos + DRAW_SIZE * 3, yPos + DRAW_SIZE / 2);
         p.down();
-        p.move(xPos + DRAW_SIZE*3, yPos - DRAW_SIZE/2);
-        p.move(xPos - DRAW_SIZE*3, yPos - DRAW_SIZE/2);
-        p.move(xPos - DRAW_SIZE*3, yPos + DRAW_SIZE/2);
-        p.move(xPos + DRAW_SIZE*3, yPos + DRAW_SIZE/2);
+        p.move(xPos + DRAW_SIZE * 3, yPos - DRAW_SIZE / 2);
+        p.move(xPos - DRAW_SIZE * 3, yPos - DRAW_SIZE / 2);
+        p.move(xPos - DRAW_SIZE * 3, yPos + DRAW_SIZE / 2);
+        p.move(xPos + DRAW_SIZE * 3, yPos + DRAW_SIZE / 2);
         //draw hat point
         p.up();
-        p.move(xPos + DRAW_SIZE*2, yPos + DRAW_SIZE/2);
+        p.move(xPos + DRAW_SIZE * 2, yPos + DRAW_SIZE / 2);
         p.down();
-        p.move(xPos, yPos + DRAW_SIZE*6);
-        p.move(xPos - DRAW_SIZE*2, yPos + DRAW_SIZE/2);
+        p.move(xPos, yPos + DRAW_SIZE * 6);
+        p.move(xPos - DRAW_SIZE * 2, yPos + DRAW_SIZE / 2);
     }
-    
+
     /**
      * Casts a very cool spell from a Wizard
+     *
+     * @param target
      */
-    public void castSpell() {
+    public void castSpell(HumanInterface target) {
         //check if there is enough magicka
         if (magicka > SPELL_COST) {
             magicka -= SPELL_COST;
-            System.out.println(name + " cast an epic spell for " + SPELL_COST + " magicka");
+
+            //damage the target
+            target.setHealth(target.getHealth() - (SPELL_COST * 2 * level));
+
+            System.out.println(name + " cast an epic spell for " + SPELL_COST + " magicka at " + target.getName());
         }
     }
-    
+
     /**
      * Set the Magicka level of a Wizard, return false if invalid
+     *
      * @param m
-     * @return 
+     * @return
      */
     public boolean setMagicka(int m) {
         boolean sucess = false;
@@ -100,21 +111,49 @@ public class Wizard extends Human {
 
         return sucess;
     }
-    
+
     /**
      * Get the current magicka level
-     * @return 
+     *
+     * @return
      */
     public int getMagicka() {
         return magicka;
     }
-    
+
     /**
      * Provides info on what a valid magicka level is
-     * @return 
+     *
+     * @return
      */
     public static String getMagickaRules() {
         return showRule(LOW_MAGICKA, HIGH_MAGICKA);
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public boolean levelUp() {
+        boolean success = false;
+
+        //check if there is enough health and magicka
+        if (magicka > HIGH_MAGICKA / 3 && health > HIGH_HEALTH / 2) {
+            magicka -= HIGH_MAGICKA / 3;
+            level++;
+
+            System.out.println(name + " leveled up! They are now level: " + level);
+        }
+
+        return success;
+    }
+
+    /**
+     * Using wizard magic heal to full health without the restrictions
+     */
+    @Override
+    public void heal() {
+        health = HIGH_HEALTH;
     }
 
     @Override
@@ -135,7 +174,7 @@ public class Wizard extends Human {
                 && other.age == this.age
                 && other.magicka == this.magicka;
     }
-    
+
     @Override
     public Wizard clone() {
         Wizard copy = new Wizard(name, age, height, health, xPos, yPos, magicka);

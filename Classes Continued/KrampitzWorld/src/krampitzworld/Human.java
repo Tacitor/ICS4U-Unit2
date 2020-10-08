@@ -122,7 +122,7 @@ abstract public class Human implements HumanInterface {
     }
 
     @Override
-    public int getHeath() {
+    public int getHealth() {
         return health;
     }
 
@@ -221,6 +221,17 @@ abstract public class Human implements HumanInterface {
         String range = "A number between: " + num1 + " and: " + num2 + ", inclusive.";
 
         return range;
+    }
+    
+    /**
+     * Heal the user to max health
+     */
+    @Override
+    public void heal() {
+        //check if they are low enough for healing 20% min
+        if (health <= ((HIGH_HEALTH / 100) * 20)) {
+            health = HIGH_HEALTH;
+        }
     }
 
 }

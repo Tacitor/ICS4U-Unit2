@@ -86,8 +86,9 @@ public class Archer extends Human {
     
     /**
      * Shoot an arrows, watch out this hurts the user
+     * @param target
      */
-    public void shoot() {
+    public void shoot(HumanInterface target) {
         //check if there are enough arrows
         if (arrows > SHOOT_COST) {
             arrows -= SHOOT_COST;
@@ -95,7 +96,10 @@ public class Archer extends Human {
             //inflict self harm from shooting
             health-= SHOOT_COST * SHOOT_DAM_MULTI;
             
-            System.out.println(name + " shot " + SHOOT_COST + " arrows and took " + SHOOT_COST * SHOOT_DAM_MULTI + " damage");
+            //damage the target
+            target.setHealth(target.getHealth() - SHOOT_DAM_MULTI * 5);
+            
+            System.out.println(name + " shot " + SHOOT_COST + " arrows at " + target.getName() + " and took " + SHOOT_COST * SHOOT_DAM_MULTI + " self-damage");
         }
     }
     

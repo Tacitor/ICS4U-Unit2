@@ -50,8 +50,23 @@ public class KrampitzWorld {
         //Instantiated an Human from the third class (Archer)
         arch = new Archer("Ronaldo", 10, 1, 50, 0, 0, 20);
         arch.move(-10, 200);
-        ((Archer)arch).shoot();
-        ((Archer)arch).shoot();
+        ((Archer)arch).shoot(h2);
+        ((Archer)arch).shoot(h1);
+        
+        //have the wizzard fight back
+        ((Wizard)h2).castSpell(arch);
+        
+        //have the archer heal
+        arch.heal();
+        
+        //have the wizzard fight back but first he must level up 
+        h2.heal();
+        ((Wizard)h2).levelUp();
+        ((Wizard)h2).levelUp();
+        ((Wizard)h2).castSpell(arch);
+        
+        //have the knight attack the wizard close by using his ranged limeted attack
+        ((Knight)h3).stab(h4);
         
         h1.draw(pen);
         h2.draw(pen);

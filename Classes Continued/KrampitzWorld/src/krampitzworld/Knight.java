@@ -17,6 +17,7 @@ public class Knight extends Human {
     //instance vars
     protected String horseName;
     //maybe a var for power levels, if I have time
+    //nope turns out Knights don't really make sense to have power levels
 
     //class vars
     protected static Color KNIGHT_COLOUR = Color.RED;
@@ -83,6 +84,21 @@ public class Knight extends Human {
      */
     public String getHorseName() {
         return horseName;
+    }
+    
+    /**
+     * A range limited attack used by knights because they sadly don't know magic :(
+     * @param target 
+     */
+    public void stab(HumanInterface target) {
+        //check if there is another human close enough to stab
+        if (Math.sqrt(((target.getXPos() - xPos) * (target.getXPos()- xPos) + (target.getYPos()-yPos) * (target.getYPos()-yPos))) <= 30) {
+            
+            //damage the target
+            target.setHealth(target.getHealth() - Human.HIGH_HEALTH / 4);
+            
+            System.out.println(name + " stabed " + target.getName() + " real good and imflicted " + Human.HIGH_HEALTH / 4 + " damage");
+        }
     }
 
     @Override

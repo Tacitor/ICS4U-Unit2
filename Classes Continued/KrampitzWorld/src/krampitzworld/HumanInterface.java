@@ -28,7 +28,7 @@ public interface HumanInterface {
     //change the height, return false if invalid
     public boolean setHeight(double h);
     //return the health
-    public int getHeath();
+    public int getHealth();
     //change the height, return false if invalid
     public boolean setHealth(int h);
     //draw a humna
@@ -40,6 +40,7 @@ public interface HumanInterface {
     //get the x pos
     public int getXPos();
     //return string with all atributes
+    public void heal();
     @Override
     public String toString();
 }
